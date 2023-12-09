@@ -1,0 +1,22 @@
+<repository lastmodified='20231209070206.560'>
+  <resource id='com.kalicode.test.confluenceModule/1.0.0' symbolicname='com.kalicode.test.confluenceModule' presentationname='confluenceModule' uri='confluenceModule-1.0.0.jar' version='1.0.0'>
+    <description>This is the com.kalicode.test:confluenceModule plugin for Atlassian Confluence.</description>
+    <size>213029</size>
+    <documentation>http://www.example.com/</documentation>
+    <capability name='bundle'>
+      <p n='symbolicname' v='com.kalicode.test.confluenceModule'/>
+      <p n='presentationname' v='confluenceModule'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.kalicode.test.api'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=com.atlassian.plugin.spring.scanner.annotation.export))' extend='false' multiple='false' optional='false'>Import package com.atlassian.plugin.spring.scanner.annotation.export</require>
+    <require name='package' filter='(&amp;(package=com.atlassian.plugin.spring.scanner.annotation.imports))' extend='false' multiple='false' optional='false'>Import package com.atlassian.plugin.spring.scanner.annotation.imports</require>
+    <require name='package' filter='(&amp;(package=com.atlassian.sal.api))' extend='false' multiple='false' optional='false'>Import package com.atlassian.sal.api</require>
+    <require name='package' filter='(&amp;(package=com.kalicode.test.api))' extend='false' multiple='false' optional='false'>Import package com.kalicode.test.api</require>
+    <require name='package' filter='(&amp;(package=javax.inject))' extend='false' multiple='false' optional='false'>Import package javax.inject</require>
+  </resource>
+</repository>
