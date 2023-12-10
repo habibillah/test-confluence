@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kalicode.test</groupId>
     <artifactId>confluenceModule</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <organization>
         <name>Example Company</name>
@@ -150,7 +150,7 @@
 
     <distributionManagement>
         <repository>
-            <id>local</id>
+            <id>local-packages</id>
             <name>Local Packages</name>
             <url>file:///home/pujangga/confluenceModule/packages/</url>
         </repository>
