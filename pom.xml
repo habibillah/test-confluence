@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kalicode.test</groupId>
     <artifactId>confluenceModule</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
 
     <organization>
         <name>Example Company</name>
@@ -20,7 +20,7 @@
         <url>https://github.com/habibillah/test-confluence/tree/master</url>
         <connection>scm:git:ssh://git@github.com/habibillah/test-confluence.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/habibillah/test-confluence.git</developerConnection>
-        <tag>confluenceModule-1.0.0</tag>
+        <tag>confluenceModule-1.0.3</tag>
     </scm>
 
     <dependencies>
