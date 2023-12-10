@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kalicode.test</groupId>
     <artifactId>confluenceModule</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <organization>
         <name>Example Company</name>
@@ -17,9 +17,9 @@
     <packaging>atlassian-plugin</packaging>
 
     <scm>
-        <url>https://github.com/habibillah/test-confluence</url>
-        <connection>scm:git:ssh://git@github.com:habibillah/test-confluence.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:habibillah/test-confluence.git</developerConnection>
+        <url>https://github.com/habibillah/test-confluence/tree/master</url>
+        <connection>scm:git:ssh://git@github.com/habibillah/test-confluence.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/habibillah/test-confluence.git</developerConnection>
         <tag>confluenceModule-1.0.0</tag>
     </scm>
 
