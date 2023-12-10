@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kalicode.test</groupId>
@@ -19,10 +17,10 @@
     <packaging>atlassian-plugin</packaging>
 
     <scm>
-        <url>https://github.com/habibillah/test-confluence</url>
-        <connection>scm:git:ssh://git@github.com:habibillah/test-confluence.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:habibillah/test-confluence.git</developerConnection>
-        <tag>HEAD</tag>
+        <url>https://github.com/habibillah/test-confluence/tree/master</url>
+        <connection>scm:git:ssh://git@github.com/habibillah/test-confluence.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/habibillah/test-confluence.git</developerConnection>
+        <tag>confluenceModule-1.0.0</tag>
     </scm>
 
     <dependencies>
@@ -80,9 +78,11 @@
                 <version>${amps.version}</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <jvmArgs>-Xmx2048m -Xms1024m -XX:MaxPermSize=1024m</jvmArgs>
                     <productVersion>${confluence.version}</productVersion>
                     <productDataVersion>${confluence.data.version}</productDataVersion>
                     <enableQuickReload>true</enableQuickReload>
+                    <allowGoogleTracking>false</allowGoogleTracking>
 
                     <!-- See here for an explanation of default instructions: -->
                     <!-- https://developer.atlassian.com/docs/advanced-topics/configuration-of-instructions-in-atlassian-plugins -->
@@ -119,11 +119,34 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <includeExclude>-com.atlassian.plugin.spring.scanner.annotation.*</includeExclude>
+                    <scannedDependencies>
+                        <dependency>
+                            <groupId>com.atlassian.plugin</groupId>
+                            <artifactId>atlassian-spring-scanner-external-jar</artifactId>
+                        </dependency>
+                    </scannedDependencies>
                     <verbose>false</verbose>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </snapshots>
+            <id>atlassian-public</id>
+            <url>https://maven.atlassian.com/repository/public</url>
+        </repository>
+    </repositories>
 
     <properties>
         <confluence.version>6.14.0</confluence.version>
@@ -136,6 +159,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.test.skip>true</maven.test.skip>
     </properties>
 
 </project>

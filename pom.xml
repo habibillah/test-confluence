@@ -148,6 +148,13 @@
         </repository>
     </repositories>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/habibillah/test-confluence</url>
+        </repository>
+    </distributionManagement>
     <properties>
         <confluence.version>6.14.0</confluence.version>
         <confluence.data.version>6.14.0</confluence.data.version>
