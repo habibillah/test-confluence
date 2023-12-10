@@ -150,9 +150,9 @@
 
     <distributionManagement>
         <repository>
-            <id>local-packages</id>
-            <name>Local Packages</name>
-            <url>file:///home/pujangga/confluenceModule/packages/</url>
+            <id>github</id>
+            <name>Github Packages</name>
+            <url>https://github.com/habibillah/test-confluence/releases</url>
         </repository>
     </distributionManagement>
     <properties>
